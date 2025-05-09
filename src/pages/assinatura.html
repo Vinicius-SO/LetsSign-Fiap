@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contrato de Aluguel - Lets Sign</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/assinatura.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-2">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand d-flex align-items-center me-3" href="#">
+          <img src="../img/Logo.svg" alt="Logo Lets Sign" height="36" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+          <ul class="navbar-nav ms-auto d-flex gap-3 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-primary fw-normal small" href="#"
+                >Sobre Nós</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fw-normal small" href="#"
+                >Suporte</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="hero-container">
+      <p class="text-center mb-4 subtitle"></p>
+
+      <div class="card border-0 shadow-none bg-white">
+        <div class="card-header text-center bg-white border-0">
+          <h5 class="card-title">Contrato de Aluguel</h5>
+        </div>
+
+        <div class="progress mb-2">
+          <div class="progress-bar" role="progressbar" style="width: 60%"></div>
+        </div>
+        <p id="instructionText" class="instruction-text">Assine no campo abaixo</p>
+
+          <div class="d-flex justify-content-around border-bottom mb-4">
+            <div id="tab-digitar" class="tab-btn active">✒️ Digitar</div>
+            <div id="tab-desenhar" class="tab-btn">✍️ Desenhar</div>
+          </div>
+
+          <div id="conteudo-digitar">
+            <input
+              type="text"
+              id="nomeInput"
+              class="form-control mb-4"
+              placeholder="Digite seu nome"
+              value="Joe Doe"
+            />
+            <div id="assinaturaPreview" class="signature-preview style-1">
+              JOE DOE
+            </div>
+
+            <div class="style-buttons">
+              <button id="btn-style-1" class="style-button active">
+                Estilo 1
+              </button>
+              <button id="btn-style-2" class="style-button">Estilo 2</button>
+              <button id="btn-style-3" class="style-button">Estilo 3</button>
+            </div>
+          </div>
+
+          <div id="conteudo-desenhar" style="display: none">
+            <canvas id="assinaturaCanvas"></canvas>
+            <button
+              id="btn-limpar"
+              class="btn btn-outline-secondary btn-clear w-100 mt-3"
+            >
+              Limpar Assinatura
+            </button>
+          </div>
+
+          <div class="d-grid gap-3 mt-4">
+            <button class="btn btn-primary">Próxima Etapa</button>
+            <button class="btn btn-outline-secondary">Voltar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/assinatura.js"></script>
+  </body>
+</html>
